@@ -61,6 +61,30 @@ body,button,input,select,textarea{font-family:"Satoshi",sans-serif}
 html,body,body *:not(svg):not(path){font-family:"Satoshi",sans-serif}
 /* Brand marks retain their shapes; names are a graceful fallback if a source is unavailable. */
 .brand-tile{overflow:hidden}.brand-mark{display:block;max-width:78%;width:auto;height:auto;max-height:36px;min-height:20px;object-fit:contain}.brand-tile:hover .brand-mark{opacity:.8}
+
+/* Company-first homepage: editorial headline and three accessible featured companies. */
+.hero-companies{padding-bottom:clamp(54px,7vw,100px);background:#f7fbfc}
+.hero-companies .hero-content{min-height:0;padding-top:clamp(85px,10vw,150px);padding-bottom:clamp(38px,5vw,66px)}
+.hero-companies .hero-copy{max-width:1180px}
+.hero-companies h1{font-size:clamp(44px,5.8vw,87px);line-height:1.08;letter-spacing:-.045em;max-width:1120px;text-wrap:initial}
+.hero-companies .hero-emphasis{display:inline;color:#0073b4}
+.hero-companies .hero-sub{max-width:670px;font-size:clamp(16px,1.5vw,19px);margin:24px 0 0;line-height:1.65}
+.company-showcase{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.7vw,24px)}
+.showcase-card{min-width:0;min-height:clamp(315px,34vw,470px);position:relative;isolation:isolate;overflow:hidden;background:#201d59;color:white;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(22px,2.5vw,35px);transition:transform .25s ease,box-shadow .25s ease}
+.showcase-card:before{content:"";position:absolute;inset:0;z-index:-2;background-image:var(--card-photo);background-size:cover;background-position:center;transition:transform .6s ease}
+.showcase-card:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(18,17,51,.4) 0%,rgba(18,17,51,.12) 30%,rgba(18,17,51,.91) 100%)}
+.showcase-card:hover{box-shadow:0 15px 35px rgba(32,29,89,.2)}
+.showcase-card:hover:before{transform:scale(1.055)}
+.showcase-number{font-size:13px;font-weight:700;letter-spacing:.06em;line-height:1.5;color:#f0f7fa}
+.showcase-body h2{margin:0 0 12px;font-size:clamp(28px,2.9vw,43px);font-weight:900;letter-spacing:-.035em;line-height:1.15}
+.showcase-body p{max-width:340px;margin:0 0 27px;font-size:15px;line-height:1.65;color:#f2f6f9}
+.showcase-link{display:inline-block;font-size:14px;font-weight:700;line-height:1.5;border-bottom:1px solid #a5dceb;padding-bottom:7px}
+.showcase-footer{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-top:23px}
+.showcase-footer span{font-size:12px;letter-spacing:.055em;line-height:1.5;font-weight:700}
+.showcase-footer a{font-size:14px;font-weight:700;border-bottom:1px solid #0073b4;padding-bottom:5px}
+@media(max-width:900px){.company-showcase{grid-template-columns:repeat(2,minmax(0,1fr))}.showcase-card:last-child{grid-column:1/-1;min-height:310px}.hero-companies .hero-content{padding-top:100px}.hero-companies h1{font-size:clamp(45px,6.4vw,67px)}}
+@media(max-width:650px){.hero-companies .hero-content{padding-top:67px;padding-bottom:34px}.hero-companies h1{font-size:clamp(37px,9vw,54px);line-height:1.13}.hero-companies .hero-emphasis{display:inline}.hero-companies .hero-sub{font-size:15px;margin-top:20px}.company-showcase{grid-template-columns:1fr;gap:14px}.showcase-card,.showcase-card:last-child{grid-column:auto;min-height:330px}.showcase-body h2{font-size:35px}.showcase-footer{align-items:flex-start;flex-direction:column}.showcase-footer span{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.showcase-card,.showcase-card:before{transition:none}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"P&J Group","url":"https://pandjgroup.co.uk","subOrganization":[{"@type":"Organization","name":"P&J Glass","url":"https://pj-glass.co.uk/"},{"@type":"Organization","name":"P&J Bespoke","url":"https://pnjbespoke.co.uk/"},{"@type":"Organization","name":"P&J Renovations","url":"https://pjrenovation.co.uk/"}]}</script>
 </head>
@@ -72,13 +96,17 @@ html,body,body *:not(svg):not(path){font-family:"Satoshi",sans-serif}
 <a class="header-cta" href="#contact">START A PROJECT</a><button class="menu-toggle" aria-expanded="false" aria-controls="navigation">MENU ☰</button>
 </div></header>
 <main id="main">
-<section id="top" class="hero"><div class="wrap hero-content"><div class="hero-copy">
-<p class="eyebrow">P&J GROUP — THE BUILT ENVIRONMENT, CONSIDERED</p>
-<h1 class="display">CRAFTING <span class="outline">BETTER</span><span>SPACES.</span></h1>
-<p class="hero-sub">Specialists in architectural glass, bespoke interiors and property renovation. Three distinct disciplines, united by attention to detail.</p>
-<div class="hero-actions"><a class="btn btn-dark" href="#companies">EXPLORE THE GROUP </a><a class="btn btn-light" href="#contact">DISCUSS A PROJECT </a></div>
-</div></div><div class="wrap hero-footer"><span>01 / GLASS &nbsp; 02 / BESPOKE &nbsp; 03 / RENOVATIONS</span><span>SCROLL TO EXPLORE ↓</span></div>
-<div class="hero-photo"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=2000&q=88" alt="Contemporary architectural interior with expansive glazing" fetchpriority="high"><div class="image-caption">Architectural inspiration — illustrative photography</div></div></section>
+<section id="top" class="hero hero-companies"><div class="wrap hero-content"><div class="hero-copy">
+<p class="eyebrow">P&J GROUP / THREE SPECIALIST BUSINESSES</p>
+<h1 class="display">ONE GROUP.<br><span class="hero-emphasis">THREE SPECIALIST</span><br>COMPANIES.</h1>
+<p class="hero-sub">Architectural glass, bespoke interiors and property renovation. Explore the people and expertise behind P&J Group.</p>
+</div></div>
+<div class="wrap"><div class="company-showcase" aria-label="Explore P&J Group companies">
+<a class="showcase-card" href="https://pj-glass.co.uk/" target="_blank" rel="noopener noreferrer" style="--card-photo:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&q=85')"><span class="showcase-number">01 / ARCHITECTURAL GLASS</span><div class="showcase-body"><h2>P&J Glass</h2><p>Architectural glazing, balustrades, mirrors and bespoke glass solutions.</p><span class="showcase-link">Explore P&J Glass</span></div></a>
+<a class="showcase-card" href="https://pnjbespoke.co.uk/" target="_blank" rel="noopener noreferrer" style="--card-photo:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=900&q=85')"><span class="showcase-number">02 / BESPOKE INTERIORS</span><div class="showcase-body"><h2>P&J Bespoke</h2><p>Kitchens, fitted bedrooms, staircases and considered joinery.</p><span class="showcase-link">Explore P&J Bespoke</span></div></a>
+<a class="showcase-card" href="https://pjrenovation.co.uk/" target="_blank" rel="noopener noreferrer" style="--card-photo:url('https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=900&q=85')"><span class="showcase-number">03 / PROPERTY RENOVATION</span><div class="showcase-body"><h2>P&J Renovations</h2><p>Refurbishments, extensions and carefully planned property transformations.</p><span class="showcase-link">Explore P&J Renovations</span></div></a>
+</div><div class="showcase-footer"><span>THREE DISCIPLINES. ONE SHARED COMMITMENT TO DETAIL.</span><a href="#companies">Discover the group companies</a></div></div>
+</section>
 <section id="group" class="section story"><div class="wrap"><div class="section-top"><i></i><span class="eyebrow">01 / The Group</span></div><div class="story-grid reveal"><h2 class="display">FROM THE<br>STRUCTURE<br>TO THE<br>FINISHING<br>DETAIL.</h2><div class="story-body"><p>Good spaces come from getting the big decisions and the smallest details right.</p><p>P&J Group brings together three specialist businesses with complementary expertise. From the clarity of architectural glazing, to the character of a bespoke interior, to the transformation of a property — each discipline has its own focus, under one group identity.</p><a href="#companies" class="textlink">MEET THE COMPANIES </a></div></div>
 <div class="group-bridge reveal"><div class="bridge-item"><span class="eyebrow muted">01 / P&J GLASS</span><strong>Clarity in every detail.</strong><small>Made-to-measure glass and glazing.</small></div><div class="bridge-item"><span class="eyebrow muted">02 / P&J BESPOKE</span><strong>Designed around living.</strong><small>Staircases, kitchens and fitted interiors.</small></div><div class="bridge-item"><span class="eyebrow muted">03 / P&J RENOVATIONS</span><strong>Spaces reimagined.</strong><small>Renovation and building services.</small></div></div></div></section>
 <section id="companies" class="section section-dark"><div class="wrap"><div class="section-top"><i></i><span class="eyebrow" style="color:#a5dceb">02 / Our Companies</span></div><div class="companies-head reveal"><h2 class="display">THREE<br>DISCIPLINES.<br>ONE GROUP.</h2><p>Explore the specialist businesses shaping homes and spaces across every scale of detail.</p></div>
