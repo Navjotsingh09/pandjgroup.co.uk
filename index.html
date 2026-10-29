@@ -85,6 +85,9 @@ html,body,body *:not(svg):not(path){font-family:"Satoshi",sans-serif}
 @media(max-width:900px){.company-showcase{grid-template-columns:repeat(2,minmax(0,1fr))}.showcase-card:last-child{grid-column:1/-1;min-height:310px}.hero-companies .hero-content{padding-top:100px}.hero-companies h1{font-size:clamp(45px,6.4vw,67px)}}
 @media(max-width:650px){.hero-companies .hero-content{padding-top:67px;padding-bottom:34px}.hero-companies h1{font-size:clamp(37px,9vw,54px);line-height:1.13}.hero-companies .hero-emphasis{display:inline}.hero-companies .hero-sub{font-size:15px;margin-top:20px}.company-showcase{grid-template-columns:1fr;gap:14px}.showcase-card,.showcase-card:last-child{grid-column:auto;min-height:330px}.showcase-body h2{font-size:35px}.showcase-footer{align-items:flex-start;flex-direction:column}.showcase-footer span{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.showcase-card,.showcase-card:before{transition:none}}
+
+/* Put featured companies first, with introductory wording beneath. */
+.hero-companies{padding-top:88px}.hero-companies .hero-content{padding-top:clamp(42px,5vw,78px);padding-bottom:clamp(42px,5vw,75px)}.hero-companies .hero-copy{max-width:1120px}.hero-companies h1{font-size:clamp(43px,5.3vw,78px)}@media(max-width:650px){.hero-companies{padding-top:72px}.hero-companies .hero-content{padding-top:36px;padding-bottom:38px}.hero-companies h1{font-size:clamp(37px,9vw,52px)}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"P&J Group","url":"https://pandjgroup.co.uk","subOrganization":[{"@type":"Organization","name":"P&J Glass","url":"https://pj-glass.co.uk/"},{"@type":"Organization","name":"P&J Bespoke","url":"https://pnjbespoke.co.uk/"},{"@type":"Organization","name":"P&J Renovations","url":"https://pjrenovation.co.uk/"}]}</script>
 </head>
@@ -96,17 +99,16 @@ html,body,body *:not(svg):not(path){font-family:"Satoshi",sans-serif}
 <a class="header-cta" href="#contact">START A PROJECT</a><button class="menu-toggle" aria-expanded="false" aria-controls="navigation">MENU ☰</button>
 </div></header>
 <main id="main">
-<section id="top" class="hero hero-companies"><div class="wrap hero-content"><div class="hero-copy">
-<p class="eyebrow">P&J GROUP / THREE SPECIALIST BUSINESSES</p>
-<h1 class="display">ONE GROUP.<br><span class="hero-emphasis">THREE SPECIALIST</span><br>COMPANIES.</h1>
-<p class="hero-sub">Architectural glass, bespoke interiors and property renovation. Explore the people and expertise behind P&J Group.</p>
-</div></div>
-<div class="wrap"><div class="company-showcase" aria-label="Explore P&J Group companies">
+<section id="top" class="hero hero-companies"><div class="wrap"><div class="company-showcase" aria-label="Explore P&J Group companies">
 <a class="showcase-card" href="https://pj-glass.co.uk/" target="_blank" rel="noopener noreferrer" style="--card-photo:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&q=85')"><span class="showcase-number">01 / ARCHITECTURAL GLASS</span><div class="showcase-body"><h2>P&J Glass</h2><p>Architectural glazing, balustrades, mirrors and bespoke glass solutions.</p><span class="showcase-link">Explore P&J Glass</span></div></a>
 <a class="showcase-card" href="https://pnjbespoke.co.uk/" target="_blank" rel="noopener noreferrer" style="--card-photo:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=900&q=85')"><span class="showcase-number">02 / BESPOKE INTERIORS</span><div class="showcase-body"><h2>P&J Bespoke</h2><p>Kitchens, fitted bedrooms, staircases and considered joinery.</p><span class="showcase-link">Explore P&J Bespoke</span></div></a>
 <a class="showcase-card" href="https://pjrenovation.co.uk/" target="_blank" rel="noopener noreferrer" style="--card-photo:url('https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=900&q=85')"><span class="showcase-number">03 / PROPERTY RENOVATION</span><div class="showcase-body"><h2>P&J Renovations</h2><p>Refurbishments, extensions and carefully planned property transformations.</p><span class="showcase-link">Explore P&J Renovations</span></div></a>
 </div><div class="showcase-footer"><span>THREE DISCIPLINES. ONE SHARED COMMITMENT TO DETAIL.</span><a href="#companies">Discover the group companies</a></div></div>
-</section>
+<div class="wrap hero-content"><div class="hero-copy">
+<p class="eyebrow">P&J GROUP / THREE SPECIALIST BUSINESSES</p>
+<h1 class="display">ONE GROUP.<br><span class="hero-emphasis">THREE SPECIALIST</span><br>COMPANIES.</h1>
+<p class="hero-sub">Architectural glass, bespoke interiors and property renovation. Explore the people and expertise behind P&J Group.</p>
+</div></div></section>
 <section id="group" class="section story"><div class="wrap"><div class="section-top"><i></i><span class="eyebrow">01 / The Group</span></div><div class="story-grid reveal"><h2 class="display">FROM THE<br>STRUCTURE<br>TO THE<br>FINISHING<br>DETAIL.</h2><div class="story-body"><p>Good spaces come from getting the big decisions and the smallest details right.</p><p>P&J Group brings together three specialist businesses with complementary expertise. From the clarity of architectural glazing, to the character of a bespoke interior, to the transformation of a property — each discipline has its own focus, under one group identity.</p><a href="#companies" class="textlink">MEET THE COMPANIES </a></div></div>
 <div class="group-bridge reveal"><div class="bridge-item"><span class="eyebrow muted">01 / P&J GLASS</span><strong>Clarity in every detail.</strong><small>Made-to-measure glass and glazing.</small></div><div class="bridge-item"><span class="eyebrow muted">02 / P&J BESPOKE</span><strong>Designed around living.</strong><small>Staircases, kitchens and fitted interiors.</small></div><div class="bridge-item"><span class="eyebrow muted">03 / P&J RENOVATIONS</span><strong>Spaces reimagined.</strong><small>Renovation and building services.</small></div></div></div></section>
 <section id="companies" class="section section-dark"><div class="wrap"><div class="section-top"><i></i><span class="eyebrow" style="color:#a5dceb">02 / Our Companies</span></div><div class="companies-head reveal"><h2 class="display">THREE<br>DISCIPLINES.<br>ONE GROUP.</h2><p>Explore the specialist businesses shaping homes and spaces across every scale of detail.</p></div>
