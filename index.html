@@ -88,6 +88,25 @@ html,body,body *:not(svg):not(path){font-family:"Satoshi",sans-serif}
 
 /* Put featured companies first, with introductory wording beneath. */
 .hero-companies{padding-top:88px}.hero-companies .hero-content{padding-top:clamp(42px,5vw,78px);padding-bottom:clamp(42px,5vw,75px)}.hero-companies .hero-copy{max-width:1120px}.hero-companies h1{font-size:clamp(43px,5.3vw,78px)}@media(max-width:650px){.hero-companies{padding-top:72px}.hero-companies .hero-content{padding-top:36px;padding-bottom:38px}.hero-companies h1{font-size:clamp(37px,9vw,52px)}}
+
+/* Equal prominence: three deliberately composed architectural panels. */
+.hero-companies{background:#f7fbfc;padding-top:clamp(94px,9vw,132px);padding-bottom:0}
+.hero-companies>.wrap:first-child{position:relative}
+.hero-companies .company-showcase{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.5vw,22px);align-items:stretch}
+.hero-companies .showcase-card,.hero-companies .showcase-card:last-child{grid-column:auto;min-height:clamp(405px,40vw,555px);border-radius:2px;padding:clamp(22px,2.4vw,34px);box-shadow:none;transform:none}
+.hero-companies .showcase-card:after{background:linear-gradient(180deg,rgba(13,20,45,.48),rgba(13,20,45,.05) 35%,rgba(13,20,45,.9) 100%)}
+.hero-companies .showcase-number{display:inline-flex;align-self:flex-start;border:1px solid rgba(255,255,255,.7);padding:9px 13px;font-size:12px;letter-spacing:.06em}
+.hero-companies .showcase-body h2{font-size:clamp(30px,3vw,44px);font-weight:900;letter-spacing:-.04em;line-height:1.09}
+.hero-companies .showcase-body p{font-size:15px;line-height:1.65;max-width:315px;color:#f8fbff}
+.hero-companies .showcase-link{font-size:14px}
+.hero-companies .showcase-footer{padding:18px 0 0;margin:0;border-bottom:1px solid #dbe7ee;padding-bottom:23px}
+.hero-companies .hero-content{padding-top:clamp(70px,8vw,118px);padding-bottom:clamp(70px,8vw,118px);min-height:0}
+.hero-companies .hero-copy{max-width:1000px}
+.hero-companies .hero .eyebrow{color:#0073b4}
+.hero-companies h1{font-size:clamp(46px,5.8vw,84px);line-height:1.07;letter-spacing:-.045em}
+.hero-companies .hero-sub{max-width:680px}
+@media(max-width:900px){.hero-companies .company-showcase{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.hero-companies .showcase-card,.hero-companies .showcase-card:last-child{min-height:380px;padding:18px}.hero-companies .showcase-body h2{font-size:clamp(23px,3.2vw,34px)}.hero-companies .showcase-body p{font-size:13px}}
+@media(max-width:650px){.hero-companies{padding-top:82px}.hero-companies .company-showcase{grid-template-columns:1fr;gap:12px}.hero-companies .showcase-card,.hero-companies .showcase-card:last-child{min-height:330px;padding:24px}.hero-companies .showcase-body h2{font-size:36px}.hero-companies .showcase-body p{font-size:15px}.hero-companies .showcase-footer{align-items:flex-start}.hero-companies .hero-content{padding-top:58px;padding-bottom:65px}.hero-companies h1{font-size:clamp(37px,9vw,52px)}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"P&J Group","url":"https://pandjgroup.co.uk","subOrganization":[{"@type":"Organization","name":"P&J Glass","url":"https://pj-glass.co.uk/"},{"@type":"Organization","name":"P&J Bespoke","url":"https://pnjbespoke.co.uk/"},{"@type":"Organization","name":"P&J Renovations","url":"https://pjrenovation.co.uk/"}]}</script>
 </head>
